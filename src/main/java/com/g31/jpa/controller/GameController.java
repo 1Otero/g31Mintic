@@ -44,12 +44,6 @@ public class GameController {
         return ResponseEntity.status(201).build();
     }
     
-//    @PutMapping("/update")
-//    public ResponseEntity updateGame(@RequestBody Game game){
-//        gameService.updateGame(game);
-//        return ResponseEntity.status(201).build();
-//    } 
-    
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Game updateGame(@RequestBody Game game){
@@ -57,7 +51,7 @@ public class GameController {
     }
     
     
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteGame(@PathVariable("id") Long id){
        gameService.deleteGame(id);
        return ResponseEntity.status(204).build();

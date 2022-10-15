@@ -27,11 +27,7 @@ public class GameService {
     public Game saveGame(Game game){
         return gameRepository.save(game);
     }
-    
-//    public Game updateGame(Game game){
-//        return gameRepository.save(game);
-//    }
-    
+
     public Game updateGame(Game game){
         //valido si viene un id en la información de la peticion
         //si no viene retorno la entidad recibida como parametro
